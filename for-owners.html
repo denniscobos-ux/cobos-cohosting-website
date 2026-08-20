@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For Property Owners | Cobos Cohosting</title>
+  <meta name="description" content="Interested in hands-off property management? Contact Cobos Cohosting to learn how we can manage your midterm rental and generate passive income for you.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <div class="nav__logo-icon">C</div>
+      <div class="nav__logo-text">Cobos<span>Cohosting</span></div>
+    </a>
+    <div class="nav__links">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="for-owners.html" class="nav__link active">For Owners</a>
+      <a href="about.html" class="nav__link">About Us</a>
+      <a href="services.html" class="nav__link">Our Services</a>
+      <a href="for-owners.html#contact" class="nav__cta">Get Started</a>
+    </div>
+    <div class="nav__toggle" onclick="document.querySelector('.mobile-nav').classList.add('open')">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav">
+  <button class="mobile-nav__close" onclick="this.parentElement.classList.remove('open')">&times;</button>
+  <a href="index.html">Home</a>
+  <a href="for-owners.html">For Owners</a>
+  <a href="about.html">About Us</a>
+  <a href="services.html">Our Services</a>
+  <a href="for-owners.html#contact" class="btn btn--primary">Get Started</a>
+</div>
+
+<!-- LANDING HERO -->
+<section class="landing-hero">
+  <div class="landing-hero__inner">
+    <div>
+      <h1 class="landing-hero__title">Turn Your Property Into <em>Passive Income</em></h1>
+      <p class="landing-hero__text">You own the property. We do everything else. Cobos Cohosting provides full-service midterm rental management so you can earn income without lifting a finger.</p>
+      <div class="landing-hero__checks">
+        <div class="landing-hero__check">
+          <span class="landing-hero__check-icon">&#10003;</span>
+          No day-to-day management required from you
+        </div>
+        <div class="landing-hero__check">
+          <span class="landing-hero__check-icon">&#10003;</span>
+          Professional guest screening and communication
+        </div>
+        <div class="landing-hero__check">
+          <span class="landing-hero__check-icon">&#10003;</span>
+          Dynamic pricing to maximize your revenue
+        </div>
+        <div class="landing-hero__check">
+          <span class="landing-hero__check-icon">&#10003;</span>
+          Monthly performance reports and full transparency
+        </div>
+        <div class="landing-hero__check">
+          <span class="landing-hero__check-icon">&#10003;</span>
+          Superhost-level care with a 4.98-star rating
+        </div>
+      </div>
+    </div>
+    <div id="contact" class="form-card" style="background:var(--white);color:var(--text)">
+      <h3 class="form-card__title">Get Your Free Consultation</h3>
+      <p class="form-card__subtitle">Fill out the form and we will reach out within 24 hours to discuss how we can manage your property.</p>
+      <form class="contact-form">
+        <div class="form__row">
+          <div class="form__group">
+            <label class="form__label" for="firstName">First Name *</label>
+            <input class="form__input" type="text" id="firstName" name="firstName" required>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="lastName">Last Name *</label>
+            <input class="form__input" type="text" id="lastName" name="lastName" required>
+          </div>
+        </div>
+        <div class="form__row">
+          <div class="form__group">
+            <label class="form__label" for="email">Email Address *</label>
+            <input class="form__input" type="email" id="email" name="email" required>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="phone">Phone Number *</label>
+            <input class="form__input" type="tel" id="phone" name="phone" required>
+          </div>
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="location">Property Location</label>
+          <input class="form__input" type="text" id="location" name="location" placeholder="City, State">
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="propertyType">Property Type</label>
+          <select class="form__select" id="propertyType" name="propertyType">
+            <option value="">Select one...</option>
+            <option value="Single Family Home">Single Family Home</option>
+            <option value="Condo / Apartment">Condo / Apartment</option>
+            <option value="Townhouse">Townhouse</option>
+            <option value="Multi-Family">Multi-Family</option>
+            <option value="Vacation Home">Vacation Home</option>
+            <option value="Other">Other</option>
+          </select>
+        </div>
+        <div class="form__group">
+          <label class="form__label" for="message">Tell Us About Your Property</label>
+          <textarea class="form__textarea" id="message" name="message" placeholder="Number of bedrooms, current rental status, what you are looking for, etc."></textarea>
+        </div>
+        <div class="form__checkbox">
+          <input type="checkbox" id="consent" name="consent" required>
+          <label for="consent">I agree to be contacted by Cobos Cohosting via call, email, and text. To opt out, you can reply "stop" at any time.</label>
+        </div>
+        <button type="submit" class="btn btn--primary form__submit btn--arrow">Submit Your Inquiry</button>
+      </form>
+      <div class="form__success">
+        <h3>&#10003; Thank You!</h3>
+        <p>Your email app should open with your inquiry details. If it does not, please email us directly at <a href="mailto:info@coboscohosting.com" style="color:var(--blue)">info@coboscohosting.com</a>.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="section">
+  <div class="section__inner">
+    <div class="section__header section__header--center">
+      <div class="section__tag">&#9670; How It Works</div>
+      <h2 class="section__title">Getting Started Is Easy</h2>
+      <p class="section__subtitle">Four simple steps to hands-off passive income with your rental property.</p>
+    </div>
+    <div class="process-grid">
+      <div class="process-step">
+        <div class="process-step__number">1</div>
+        <h3 class="process-step__title">Contact Us</h3>
+        <p class="process-step__text">Fill out the form above or give us a call. We will learn about your property and your goals.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-step__number">2</div>
+        <h3 class="process-step__title">Property Assessment</h3>
+        <p class="process-step__text">We evaluate your property, discuss your income goals, and create a tailored management plan.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-step__number">3</div>
+        <h3 class="process-step__title">We Set Everything Up</h3>
+        <p class="process-step__text">We optimize your listing, set up pricing strategies, coordinate cleaning, and prepare for guests.</p>
+      </div>
+      <div class="process-step">
+        <div class="process-step__number">4</div>
+        <h3 class="process-step__title">Sit Back &amp; Earn</h3>
+        <p class="process-step__text">We manage everything day-to-day. You receive monthly reports and enjoy your passive income.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY OWNERS CHOOSE US -->
+<section class="section section--gray">
+  <div class="section__inner">
+    <div class="section__header section__header--center">
+      <div class="section__tag">&#9670; For Property Owners</div>
+      <h2 class="section__title">Why Owners Choose Cobos Cohosting</h2>
+    </div>
+    <div class="features" style="grid-template-columns:repeat(3,1fr)">
+      <div class="feature">
+        <div class="feature__icon">&#128274;</div>
+        <h3 class="feature__title">Zero Hassle</h3>
+        <p class="feature__text">No more midnight maintenance calls or guest check-in coordination. We handle every operational detail so you do not have to.</p>
+      </div>
+      <div class="feature">
+        <div class="feature__icon">&#128176;</div>
+        <h3 class="feature__title">Maximize Revenue</h3>
+        <p class="feature__text">Our dynamic pricing strategies and listing optimization ensure your property earns as much as possible throughout the year.</p>
+      </div>
+      <div class="feature">
+        <div class="feature__icon">&#128200;</div>
+        <h3 class="feature__title">Full Transparency</h3>
+        <p class="feature__text">Monthly performance reports with detailed KPIs keep you informed about occupancy, revenue, and guest satisfaction.</p>
+      </div>
+      <div class="feature">
+        <div class="feature__icon">&#127968;</div>
+        <h3 class="feature__title">Property Protection</h3>
+        <p class="feature__text">We screen guests, coordinate maintenance, and treat your property as if it were our own. Your investment is in safe hands.</p>
+      </div>
+      <div class="feature">
+        <div class="feature__icon">&#127760;</div>
+        <h3 class="feature__title">Remote-Friendly</h3>
+        <p class="feature__text">We operate remotely and can manage properties across the country. Distance is never a barrier to quality management.</p>
+      </div>
+      <div class="feature">
+        <div class="feature__icon">&#129309;</div>
+        <h3 class="feature__title">Personalized Approach</h3>
+        <p class="feature__text">Your goals shape our strategy. Whether you prioritize occupancy, revenue, or a mix, we tailor our approach to your needs.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section">
+  <div class="section__inner">
+    <div class="cta-banner">
+      <div>
+        <h2 class="cta-banner__title">Ready to Make Your Property Work for You?</h2>
+        <p class="cta-banner__text">Contact us today for a free consultation. No obligation, no pressure &mdash; just a conversation about your property's potential.</p>
+      </div>
+      <div class="cta-banner__buttons">
+        <a href="#contact" class="btn btn--white btn--arrow">Contact Us Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <div class="footer__logo-icon">C</div>
+          Cobos Cohosting
+        </div>
+        <p class="footer__desc">Professional midterm property management that gives you truly hands-off passive income. Superhost-level service across multiple markets.</p>
+        <div class="footer__social">
+          <a href="https://www.facebook.com/profile.php?id=61550595598284" target="_blank" rel="noopener" aria-label="Facebook">f</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer__heading">Quick Links</h4>
+        <div class="footer__links">
+          <a href="index.html">Home</a>
+          <a href="for-owners.html">For Owners</a>
+          <a href="about.html">About Us</a>
+          <a href="services.html">Our Services</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer__heading">Markets</h4>
+        <div class="footer__links">
+          <a href="#">Crystal Beach, TX</a>
+          <a href="#">Panama City Beach, FL</a>
+          <a href="#">Joshua Tree, CA</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer__heading">Contact Us</h4>
+        <div class="footer__contact-item">&#9993; <a href="mailto:info@coboscohosting.com">info@coboscohosting.com</a></div>
+        <div class="footer__contact-item">&#9742; <a href="tel:6463309443">646-330-9443</a></div>
+        <p class="footer__desc" style="margin-top:1rem">&#127468;&#127481; Tambien ofrecemos servicios en Espa&ntilde;ol!</p>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; 2026 Cobos Cohosting. All rights reserved.</span>
+      <div class="footer__lang">&#127760; English | Espa&ntilde;ol</div>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
