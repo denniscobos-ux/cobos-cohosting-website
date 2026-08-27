@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Cobos Cohosting | Midterm Property Management</title>
-  <meta name="description" content="Cobos Cohosting provides hands-off midterm property management so you can earn passive income without the daily hassles. Superhost-level service across multiple markets.">
+  <title>Cobos Cohosting | Denver Mid-Term Rental Management</title>
+  <meta name="description" content="Cobos Cohosting manages mid-term rentals (30+ day stays) across the Denver metro. Fully hands-off for you, optimized for higher, steadier income than a traditional lease.">
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
@@ -19,9 +19,10 @@
     <div class="nav__links">
       <a href="index.html" class="nav__link active">Home</a>
       <a href="for-owners.html" class="nav__link">For Owners</a>
-      <a href="about.html" class="nav__link">About Us</a>
-      <a href="services.html" class="nav__link">Our Services</a>
-      <a href="for-owners.html#contact" class="nav__cta">Get Started</a>
+      <a href="properties.html" class="nav__link">Properties</a>
+      <a href="about.html" class="nav__link">About</a>
+      <a href="contact.html" class="nav__link">Contact</a>
+      <a href="#estimate" class="nav__cta">Free Estimate</a>
     </div>
     <div class="nav__toggle" onclick="document.querySelector('.mobile-nav').classList.add('open')">
       <span></span><span></span><span></span>
@@ -34,9 +35,10 @@
   <button class="mobile-nav__close" onclick="this.parentElement.classList.remove('open')">&times;</button>
   <a href="index.html">Home</a>
   <a href="for-owners.html">For Owners</a>
-  <a href="about.html">About Us</a>
-  <a href="services.html">Our Services</a>
-  <a href="for-owners.html#contact" class="btn btn--primary">Get Started</a>
+  <a href="properties.html">Properties</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="#estimate" class="btn btn--primary">Free Estimate</a>
 </div>
 
 <!-- HERO -->
@@ -44,232 +46,145 @@
   <div class="hero__bg"></div>
   <div class="hero__content">
     <div>
-      <div class="hero__tag">&#9733; Superhost Property Management</div>
-      <h1 class="hero__title">Your Property, <em>Our Expertise.</em> Your Passive Income.</h1>
-      <p class="hero__subtitle">We manage your midterm rental property so you can enjoy truly hands-off passive income. From guest coordination to maintenance, Cobos Cohosting handles everything.</p>
+      <div class="hero__tag">&#9733; Denver Metro Mid-Term Rentals</div>
+      <h1 class="hero__title">Own a property in the Denver metro? <em>Earn more with less hassle.</em></h1>
+      <p class="hero__subtitle">Cobos Cohosting manages mid-term rentals (30+ day stays) across the Denver metro &mdash; fully hands-off for you, optimized for higher, steadier income than a traditional lease.</p>
       <div class="hero__buttons">
-        <a href="for-owners.html#contact" class="btn btn--primary btn--arrow">Talk to Us</a>
-        <a href="services.html" class="btn btn--outline">Our Services</a>
+        <a href="#estimate" class="btn btn--primary btn--arrow">Get a free income estimate</a>
+        <a href="for-owners.html" class="btn btn--outline">Learn More</a>
       </div>
     </div>
     <div class="hero__visual">
-      <div class="hero__card-group">
-        <div class="hero__stat-card">
-          <div class="hero__stat-number">4.98 &#9733;</div>
-          <div class="hero__stat-label">Average Guest Rating</div>
+      <div class="calc" id="calculator">
+        <h3 class="calc__title">Income Estimate Calculator</h3>
+        <p class="calc__subtitle">See what your property could earn as a mid-term rental.</p>
+        <div class="calc__group">
+          <label class="calc__label" for="calc-address">Property Address</label>
+          <input class="calc__input" type="text" id="calc-address" placeholder="123 Main St, Denver, CO">
         </div>
-        <div class="hero__stat-card">
-          <div class="hero__stat-number">3+</div>
-          <div class="hero__stat-label">Markets Served Nationwide</div>
+        <div class="calc__group">
+          <label class="calc__label" for="calc-bedrooms">Bedrooms</label>
+          <select class="calc__select" id="calc-bedrooms">
+            <option value="">Select...</option>
+            <option value="0">Studio</option>
+            <option value="1">1 Bedroom</option>
+            <option value="2">2 Bedrooms</option>
+            <option value="3">3 Bedrooms</option>
+            <option value="4">4 Bedrooms</option>
+            <option value="5">5+ Bedrooms</option>
+          </select>
         </div>
-        <div class="hero__stat-card">
-          <div class="hero__stat-number">100%</div>
-          <div class="hero__stat-label">Hands-Off for Property Owners</div>
+        <button class="btn btn--primary calc__btn" onclick="calculateEstimate()">Get My Estimate</button>
+        <div class="calc__result" id="calc-result">
+          <div class="calc__result-title">Estimated Monthly Income</div>
+          <div class="calc__range">
+            <div class="calc__range-item">
+              <span class="calc__range-label">Low</span>
+              <span class="calc__range-value" id="calc-low">$0</span>
+            </div>
+            <div class="calc__range-item">
+              <span class="calc__range-label">Mid</span>
+              <span class="calc__range-value" id="calc-mid">$0</span>
+            </div>
+            <div class="calc__range-item">
+              <span class="calc__range-label">High</span>
+              <span class="calc__range-value" id="calc-high">$0</span>
+            </div>
+          </div>
+          <p class="calc__result-note">Based on Denver metro median long-term rents for comparable properties. Mid-term rentals typically earn 20&ndash;35% more than standard leases. Actual results vary.</p>
+          <a href="#estimate" class="btn btn--primary calc__result-cta btn--arrow" style="width:100%;justify-content:center;margin-top:1rem">Get a detailed estimate</a>
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHAT WE DO -->
+<!-- SERVICE HIGHLIGHTS -->
 <section class="section">
   <div class="section__inner">
-    <div class="section__header section__header--center">
-      <div class="section__tag">&#9670; What We Do</div>
-      <h2 class="section__title">Full-Service Midterm Property Management</h2>
-      <p class="section__subtitle">We handle every aspect of your rental property so you can sit back and collect passive income. No stress. No hassles. Just results.</p>
-    </div>
     <div class="features">
       <div class="feature">
         <div class="feature__icon">&#9881;</div>
-        <h3 class="feature__title">Listing Optimization</h3>
-        <p class="feature__text">We craft compelling listings across platforms like Airbnb and VRBO, with professional photography recommendations and descriptions that convert browsers into bookings.</p>
-      </div>
-      <div class="feature">
-        <div class="feature__icon">&#128197;</div>
-        <h3 class="feature__title">Reservation Management</h3>
-        <p class="feature__text">We handle all inquiries, bookings, and guest communications from the first message through checkout. You never have to lift a finger.</p>
+        <h3 class="feature__title">Full Management</h3>
+        <p class="feature__text">We handle listings, tenant vetting, turnovers, and maintenance coordination. You do nothing.</p>
       </div>
       <div class="feature">
         <div class="feature__icon">&#128200;</div>
-        <h3 class="feature__title">Dynamic Pricing</h3>
-        <p class="feature__text">Our data-driven pricing strategies optimize your rates based on seasonality, local events, and market demand to maximize your revenue year-round.</p>
+        <h3 class="feature__title">Higher Income</h3>
+        <p class="feature__text">Mid-term rentals (30+ day stays) typically earn 20&ndash;40% more than a standard long-term lease.</p>
       </div>
       <div class="feature">
-        <div class="feature__icon">&#128722;</div>
-        <h3 class="feature__title">Housekeeping &amp; Supplies</h3>
-        <p class="feature__text">We coordinate professional cleaning between stays and keep your property fully stocked with essentials so it is always guest-ready.</p>
-      </div>
-      <div class="feature">
-        <div class="feature__icon">&#128736;</div>
-        <h3 class="feature__title">Maintenance Coordination</h3>
-        <p class="feature__text">From routine upkeep to emergency repairs, we manage all maintenance needs with trusted local vendors so your property stays in top condition.</p>
-      </div>
-      <div class="feature">
-        <div class="feature__icon">&#128202;</div>
-        <h3 class="feature__title">Performance Reporting</h3>
-        <p class="feature__text">Receive monthly reports tracking occupancy, revenue, guest reviews, and KPIs so you always know exactly how your investment is performing.</p>
+        <div class="feature__icon">&#128101;</div>
+        <h3 class="feature__title">Quality Tenants</h3>
+        <p class="feature__text">Traveling nurses, relocating professionals, and corporate guests who treat your home with care.</p>
       </div>
     </div>
   </div>
 </section>
 
-<!-- WHY COBOS -->
-<section class="section section--gray">
+<!-- LEAD CAPTURE -->
+<section class="section section--gray" id="estimate">
   <div class="section__inner">
-    <div class="why-grid">
+    <div class="contact-grid">
       <div>
         <div class="section__header">
-          <div class="section__tag">&#9670; Why Choose Us</div>
-          <h2 class="section__title">We Treat Your Property Like Our Own</h2>
-          <p class="section__subtitle">With backgrounds in technology, executive support, and real estate investing, we bring a unique and proven approach to property management.</p>
+          <h2 class="section__title">Curious what your property could earn?</h2>
+          <p class="section__subtitle">Tell us about your property and we'll send you a free, no-obligation income estimate.</p>
         </div>
         <div class="why-list">
           <div class="why-item">
             <div class="why-item__icon">&#10003;</div>
             <div>
-              <div class="why-item__title">Superhost Status</div>
-              <p class="why-item__text">We maintain Superhost status with a 4.98-star rating, ensuring your property meets the highest standards.</p>
+              <div class="why-item__title">No obligation</div>
+              <p class="why-item__text">Get your estimate with zero pressure or commitment.</p>
             </div>
           </div>
           <div class="why-item">
             <div class="why-item__icon">&#10003;</div>
             <div>
-              <div class="why-item__title">Truly Hands-Off</div>
-              <p class="why-item__text">We handle everything from A to Z. You set it and forget it while collecting reliable passive income.</p>
+              <div class="why-item__title">Fast response</div>
+              <p class="why-item__text">We'll get back to you within one business day.</p>
             </div>
           </div>
           <div class="why-item">
             <div class="why-item__icon">&#10003;</div>
             <div>
-              <div class="why-item__title">Bilingual Service</div>
-              <p class="why-item__text">We offer services in both English and Spanish, expanding your property's reach and guest experience.</p>
-            </div>
-          </div>
-          <div class="why-item">
-            <div class="why-item__icon">&#10003;</div>
-            <div>
-              <div class="why-item__title">Tech-Driven Operations</div>
-              <p class="why-item__text">We leverage automation, smart pricing tools, and streamlined systems for maximum efficiency and profitability.</p>
+              <div class="why-item__title">Denver metro experts</div>
+              <p class="why-item__text">We know the local market and can tailor a strategy for your property.</p>
             </div>
           </div>
         </div>
       </div>
-      <div class="why-visual">
-        <div class="why-visual__item">
-          <div class="why-visual__icon">&#127968;</div>
-          <div class="why-visual__text">Professional Property Care</div>
+      <div class="form-card">
+        <h3 class="form-card__title">Get Your Free Estimate</h3>
+        <p class="form-card__subtitle">Fill out the form and we'll send you a personalized income estimate.</p>
+        <form class="contact-form" id="estimate-form">
+          <div class="form__row">
+            <div class="form__group">
+              <label class="form__label" for="est-name">Name *</label>
+              <input class="form__input" type="text" id="est-name" name="name" required>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="est-email">Email *</label>
+              <input class="form__input" type="email" id="est-email" name="email" required>
+            </div>
+          </div>
+          <div class="form__row">
+            <div class="form__group">
+              <label class="form__label" for="est-phone">Phone *</label>
+              <input class="form__input" type="tel" id="est-phone" name="phone" required>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="est-address">Property Address *</label>
+              <input class="form__input" type="text" id="est-address" name="address" required>
+            </div>
+          </div>
+          <button type="submit" class="btn btn--primary form__submit btn--arrow">Send my estimate</button>
+        </form>
+        <div class="form__success">
+          <h3>&#10003; Thank You!</h3>
+          <p>Your estimate request has been sent. We'll get back to you within one business day.</p>
         </div>
-        <div class="why-visual__item">
-          <div class="why-visual__icon">&#128176;</div>
-          <div class="why-visual__text">Maximize Your Returns</div>
-        </div>
-        <div class="why-visual__item">
-          <div class="why-visual__icon">&#128222;</div>
-          <div class="why-visual__text">24/7 Guest Support</div>
-        </div>
-        <div class="why-visual__item">
-          <div class="why-visual__icon">&#128640;</div>
-          <div class="why-visual__text">Streamlined Operations</div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- STATS -->
-<section class="section section--navy">
-  <div class="section__inner">
-    <div class="stats">
-      <div class="stat">
-        <div class="stat__number">4.98</div>
-        <div class="stat__label">Star Rating</div>
-      </div>
-      <div class="stat">
-        <div class="stat__number">10+</div>
-        <div class="stat__label">Years Experience</div>
-      </div>
-      <div class="stat">
-        <div class="stat__number">3+</div>
-        <div class="stat__label">Markets Served</div>
-      </div>
-      <div class="stat">
-        <div class="stat__number">100%</div>
-        <div class="stat__label">Hands-Off Management</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- MARKETS -->
-<section class="section section--navy" style="padding-top:0">
-  <div class="section__inner">
-    <div class="section__header section__header--center">
-      <div class="section__tag" style="color:var(--blue)">&#9670; Our Markets</div>
-      <h2 class="section__title" style="color:var(--white)">Where We Operate</h2>
-      <p class="section__subtitle" style="color:rgba(255,255,255,.7);margin:0 auto">We have a wealth of expertise managing rental properties in distinct markets. While our achievements have been notable in these areas, we are a remote cohosting company fully equipped to expand into new markets.</p>
-    </div>
-    <div class="markets-grid">
-      <div class="market-card">
-        <div class="market-card__icon">&#127796;</div>
-        <div class="market-card__name">Crystal Beach</div>
-        <div class="market-card__state">Texas</div>
-      </div>
-      <div class="market-card">
-        <div class="market-card__icon">&#127965;</div>
-        <div class="market-card__name">Panama City Beach</div>
-        <div class="market-card__state">Florida</div>
-      </div>
-      <div class="market-card">
-        <div class="market-card__icon">&#127797;</div>
-        <div class="market-card__name">Joshua Tree</div>
-        <div class="market-card__state">California</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="section section--gray">
-  <div class="section__inner">
-    <div class="section__header section__header--center">
-      <div class="section__tag">&#9670; Testimonials</div>
-      <h2 class="section__title">What Property Owners Say</h2>
-      <p class="section__subtitle">Hear from owners who have entrusted their properties to Cobos Cohosting.</p>
-    </div>
-    <div class="testimonials-grid">
-      <div class="testimonial">
-        <div class="testimonial__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="testimonial__text">"Since working with Cobos Cohosting, I have truly been hands-off. They handle everything from guest check-in to maintenance and I just see the income deposited. It has been incredible."</p>
-        <div class="testimonial__author">Sarah M.</div>
-        <div class="testimonial__role">Property Owner, Crystal Beach TX</div>
-      </div>
-      <div class="testimonial">
-        <div class="testimonial__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="testimonial__text">"The team is responsive, professional, and truly cares about my property. My occupancy rates have gone up significantly since they took over management. Highly recommend."</p>
-        <div class="testimonial__author">James R.</div>
-        <div class="testimonial__role">Property Owner, Panama City Beach FL</div>
-      </div>
-      <div class="testimonial">
-        <div class="testimonial__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="testimonial__text">"I was overwhelmed managing my rental by myself. Cobos Cohosting took over and not only reduced my stress to zero but also improved my revenue. Best decision I have made."</p>
-        <div class="testimonial__author">Monica L.</div>
-        <div class="testimonial__role">Property Owner, Joshua Tree CA</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- CTA -->
-<section class="section">
-  <div class="section__inner">
-    <div class="cta-banner">
-      <div>
-        <h2 class="cta-banner__title">Ready for Hands-Off Passive Income?</h2>
-        <p class="cta-banner__text">Let us manage your property while you enjoy the returns. Get in touch today for a free consultation.</p>
-      </div>
-      <div class="cta-banner__buttons">
-        <a href="for-owners.html#contact" class="btn btn--white btn--arrow">Get Started</a>
       </div>
     </div>
   </div>
@@ -284,38 +199,32 @@
           <div class="footer__logo-icon">C</div>
           Cobos Cohosting
         </div>
-        <p class="footer__desc">Professional midterm property management that gives you truly hands-off passive income. Superhost-level service across multiple markets.</p>
-        <div class="footer__social">
-          <a href="https://www.facebook.com/profile.php?id=61550595598284" target="_blank" rel="noopener" aria-label="Facebook">f</a>
-        </div>
+        <p class="footer__desc">Denver metro mid-term rental management. Fully hands-off for you, optimized for higher, steadier income.</p>
       </div>
       <div>
         <h4 class="footer__heading">Quick Links</h4>
         <div class="footer__links">
           <a href="index.html">Home</a>
           <a href="for-owners.html">For Owners</a>
-          <a href="about.html">About Us</a>
-          <a href="services.html">Our Services</a>
+          <a href="properties.html">Properties</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
         </div>
       </div>
       <div>
-        <h4 class="footer__heading">Markets</h4>
+        <h4 class="footer__heading">Service Area</h4>
         <div class="footer__links">
-          <a href="#">Crystal Beach, TX</a>
-          <a href="#">Panama City Beach, FL</a>
-          <a href="#">Joshua Tree, CA</a>
+          <a href="#">Denver Metro, Colorado</a>
         </div>
       </div>
       <div>
-        <h4 class="footer__heading">Contact Us</h4>
+        <h4 class="footer__heading">Contact</h4>
         <div class="footer__contact-item">&#9993; <a href="mailto:info@coboscohosting.com">info@coboscohosting.com</a></div>
         <div class="footer__contact-item">&#9742; <a href="tel:6463309443">646-330-9443</a></div>
-        <p class="footer__desc" style="margin-top:1rem">&#127468;&#127481; Tambien ofrecemos servicios en Espa&ntilde;ol!</p>
       </div>
     </div>
     <div class="footer__bottom">
       <span>&copy; 2026 Cobos Cohosting. All rights reserved.</span>
-      <div class="footer__lang">&#127760; English | Espa&ntilde;ol</div>
     </div>
   </div>
 </footer>

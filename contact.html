@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact | Cobos Cohosting</title>
+  <meta name="description" content="Get in touch with Cobos Cohosting. Whether you're ready to get started or just exploring your options, we're happy to answer your questions about Denver mid-term rental management.">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <div class="nav__logo-icon">C</div>
+      <div class="nav__logo-text">Cobos<span>Cohosting</span></div>
+    </a>
+    <div class="nav__links">
+      <a href="index.html" class="nav__link">Home</a>
+      <a href="for-owners.html" class="nav__link">For Owners</a>
+      <a href="properties.html" class="nav__link">Properties</a>
+      <a href="about.html" class="nav__link">About</a>
+      <a href="contact.html" class="nav__link active">Contact</a>
+      <a href="index.html#estimate" class="nav__cta">Free Estimate</a>
+    </div>
+    <div class="nav__toggle" onclick="document.querySelector('.mobile-nav').classList.add('open')">
+      <span></span><span></span><span></span>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE NAV -->
+<div class="mobile-nav">
+  <button class="mobile-nav__close" onclick="this.parentElement.classList.remove('open')">&times;</button>
+  <a href="index.html">Home</a>
+  <a href="for-owners.html">For Owners</a>
+  <a href="properties.html">Properties</a>
+  <a href="about.html">About</a>
+  <a href="contact.html">Contact</a>
+  <a href="index.html#estimate" class="btn btn--primary">Free Estimate</a>
+</div>
+
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <h1 class="page-hero__title">Let's talk about your property.</h1>
+  <p class="page-hero__subtitle">Whether you're ready to get started or just exploring your options, we're happy to answer your questions. Reach out and we'll get back to you within one business day.</p>
+</section>
+
+<!-- CONTACT -->
+<section class="section">
+  <div class="section__inner">
+    <div class="contact-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-item__icon">&#9993;</div>
+          <div>
+            <div class="contact-item__label">Email</div>
+            <div class="contact-item__value"><a href="mailto:info@coboscohosting.com">info@coboscohosting.com</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item__icon">&#9742;</div>
+          <div>
+            <div class="contact-item__label">Phone</div>
+            <div class="contact-item__value"><a href="tel:6463309443">646-330-9443</a></div>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-item__icon">&#128205;</div>
+          <div>
+            <div class="contact-item__label">Service Area</div>
+            <div class="contact-item__value">Denver Metro, Colorado</div>
+          </div>
+        </div>
+      </div>
+      <div class="form-card">
+        <h3 class="form-card__title">Send Us a Message</h3>
+        <p class="form-card__subtitle">We'll get back to you within one business day.</p>
+        <form class="contact-form" id="contact-form">
+          <div class="form__row">
+            <div class="form__group">
+              <label class="form__label" for="ct-name">Name *</label>
+              <input class="form__input" type="text" id="ct-name" name="name" required>
+            </div>
+            <div class="form__group">
+              <label class="form__label" for="ct-email">Email *</label>
+              <input class="form__input" type="email" id="ct-email" name="email" required>
+            </div>
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="ct-phone">Phone</label>
+            <input class="form__input" type="tel" id="ct-phone" name="phone">
+          </div>
+          <div class="form__group">
+            <label class="form__label" for="ct-message">Message *</label>
+            <textarea class="form__textarea" id="ct-message" name="message" required placeholder="Tell us about your property or ask us anything..."></textarea>
+          </div>
+          <button type="submit" class="btn btn--primary form__submit btn--arrow">Send Message</button>
+        </form>
+        <div class="form__success">
+          <h3>&#10003; Message Sent!</h3>
+          <p>Thank you for reaching out. We'll get back to you within one business day.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer__inner">
+    <div class="footer__grid">
+      <div class="footer__brand">
+        <div class="footer__logo">
+          <div class="footer__logo-icon">C</div>
+          Cobos Cohosting
+        </div>
+        <p class="footer__desc">Denver metro mid-term rental management. Fully hands-off for you, optimized for higher, steadier income.</p>
+      </div>
+      <div>
+        <h4 class="footer__heading">Quick Links</h4>
+        <div class="footer__links">
+          <a href="index.html">Home</a>
+          <a href="for-owners.html">For Owners</a>
+          <a href="properties.html">Properties</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer__heading">Service Area</h4>
+        <div class="footer__links">
+          <a href="#">Denver Metro, Colorado</a>
+        </div>
+      </div>
+      <div>
+        <h4 class="footer__heading">Contact</h4>
+        <div class="footer__contact-item">&#9993; <a href="mailto:info@coboscohosting.com">info@coboscohosting.com</a></div>
+        <div class="footer__contact-item">&#9742; <a href="tel:6463309443">646-330-9443</a></div>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>&copy; 2026 Cobos Cohosting. All rights reserved.</span>
+    </div>
+  </div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
+</html>
